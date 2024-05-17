@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Penjumlahan Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #d6bfa1;
+        }
+
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .calculator h1 {
+            margin-bottom: 20px;
+        }
+
+        .calculator input {
+            margin: 10px;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .calculator button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #63481f;
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .calculator button:hover {
+            background-color: #757c7e;
+        }
+
+        .calculator p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #f4f4f4;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #2d2e2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Kalkulator Penjumlahan</h1>
+        <input type="number" id="num1" placeholder="Masukkan Angka Pertama">
+        <input type="number" id="num2" placeholder="Masukkan Angka Kedua">
+        <button onclick="calculateSum()">Jumlahkan</button>
+        <p id="result">Hasil: </p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Adzikra Tazkiya Qurrota'ayun</p>
+    </div>
+    <script>
+        function calculateSum() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var sum = num1 + num2;
+            document.getElementById('result').innerText = 'Hasil: ' + sum;
+        }
+    </script>
+</body>
+</html>
